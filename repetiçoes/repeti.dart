@@ -13,3 +13,5 @@ void main() {
     contador++;                                           // Aqui ele começa o ciclo depois!
   } while (contador != 10);
 }
+
+//Aula repetições Alura.
