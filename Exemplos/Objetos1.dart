@@ -26,7 +26,7 @@ class ContaCorrente {
 
 /////////////////////////////
 
-void main() {
+/*  void main() {
   ContaCorrente conta1 = ContaCorrente();
   ContaCorrente conta2 = ContaCorrente();
 
@@ -47,4 +47,4 @@ class ContaCorrente {
   int agencia = 145; //
   int conta = 0; //Importante inicializar os as nossa variaveis com algum valor.
   double saldo = 30.0; //
-}
+}*/
