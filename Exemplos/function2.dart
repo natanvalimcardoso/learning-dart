@@ -8,7 +8,7 @@ int adicionar(var num1, var num2) {
 
   print("Antes do return");
   return num1 + num2;                   //O return só puxa até ele depois não: Parametro
-  print("Depois  do return");
+ // print("Depois  do return"); 
 
 } 
 
