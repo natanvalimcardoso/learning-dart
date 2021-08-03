@@ -7,7 +7,16 @@ void main(){
   alimentos.insert(2, 'Farofa');   /* Adição de itens em posição específica  == insert*/
   print(alimentos.contains('Sal')); /* Verificação se a lista contém algum item, retornar um valor booleano true or false == contains */
 
+print('<----------------------->');
 
 print(numero);
 print(alimentos);
+print(alimentos[2]);
+
+print('<----------------------->');
+
+for( int i = 0; i < numero.length; i++){
+
+  print(numero[i]);
+}
 }
