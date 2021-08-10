@@ -13,7 +13,7 @@ void main() {
   contaTiago.conta = 2;
 
   print('Titular: ${contaTiago.titular}');
-  print('Agencia: ${contaTiago.agencia}');
+  print('Agencia: ${contaTiago.agencia}'); //estudar more
   print('Saldo: ${contaTiago.saldo}');
 }
 
