@@ -8,10 +8,10 @@ class veiculo {
 }
 
 void main() {
-  veiculo v1 = new veiculo(); //criando outras classes derivado da main
-  veiculo v2 = new veiculo(); //criando outras classes derivado da main
+  veiculo v1 = veiculo(); //criando outras classes derivado da main
+  veiculo v2 =  veiculo(); //criando outras classes derivado da main
 
-  v1.maxSpeed = 100; //pode alterar a clase depois.
+  v1.maxSpeed = 100; //pode escolher de acordo com as variavéis depois.
   v1.drive(); //Função dentro de uma classe
 
   print(v1.maxSpeed);
