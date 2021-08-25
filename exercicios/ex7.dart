@@ -1,8 +1,4 @@
 import 'dart:io';
-/* Faça um programa que receba o valor de um carro e mostre uma tabela com os seguintes dados: preço
-final, quantidade de parcelas e valor da parcela. Considere o seguinte:
-■■ o preço final para compra à vista tem desconto de 20%;
-■■ a quantidade de parcelas pode ser: 6 = 5% , 12 = 10% , 18 = 15% */
 
 void main() {
   bool condicao;
