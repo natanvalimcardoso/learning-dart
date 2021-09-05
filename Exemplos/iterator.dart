@@ -6,7 +6,7 @@ void main() {
 
   print(epicList);
 
-  Iterator itr = epicList.iterator; //entender mais
+  Iterator itr = epicList.iterator; //entender mais again.
   while(itr.moveNext()){
     
     int result = itr.current;
