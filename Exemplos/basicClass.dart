@@ -1,6 +1,6 @@
 class veiculo {
-  int maxSpeed = 80;
-  int minSpeed = 30;
+  int maxSpeed = 80; //orientação objeto
+  int minSpeed = 30; // exemplo caneta bool tampada ou nao, string cor , 
 
   void drive() { //classe Criada.
     print('dirigir');
