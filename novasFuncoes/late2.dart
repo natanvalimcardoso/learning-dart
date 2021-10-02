@@ -1,5 +1,6 @@
 void main(){
   late var resultado = teste(); //late 
+  print(resultado);
 
   print('função main');
 }
