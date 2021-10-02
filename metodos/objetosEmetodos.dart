@@ -2,7 +2,9 @@ void main() {
   ContaCorrente conta1 = ContaCorrente();
   ContaCorrente conta2 = ContaCorrente();
 
+  var contaDaAmanda;
   contaDaAmanda.titular = "Amanda";
+  var contaDoTiago;
   contaDoTiago.titular = "Tiago";
 
   print('Saldo da ${contaDaAmanda.titular}: ${contaDaAmanda.saldo}');
