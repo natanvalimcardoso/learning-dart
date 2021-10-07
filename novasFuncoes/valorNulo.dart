@@ -2,7 +2,7 @@ void main() {
   var numero = getNumero();
 
   numero ??= 100;
-  print(numero); // nulo
+  print(numero);
 }
 
 int? getNumero() {
