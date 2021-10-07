@@ -3,7 +3,11 @@ void main() {
   List<int> listInteiros = [];
 
   listString = ["maçã", "fruta", "natan"];
-  listInteiros = [1,2,3,];
+  listInteiros = [
+    1,
+    2,
+    3,
+  ];
 
   listString.add('poder');
   listString.addAll(['n1', 'n2', 'amigos']);
