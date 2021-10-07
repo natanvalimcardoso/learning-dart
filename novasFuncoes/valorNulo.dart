@@ -1,5 +1,5 @@
 void main() {
-  var numero = getNumero(); //nulos
+  var numero = getNumero(); 
 
   numero ??= 100;
   print(numero);
