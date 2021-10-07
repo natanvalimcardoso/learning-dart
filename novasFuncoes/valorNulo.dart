@@ -1,8 +1,8 @@
 void main() {
-  var numero = getNumero(); 
+  var numero = getNumero();
 
   numero ??= 100;
-  print(numero);
+  print(numero); // nulo
 }
 
 int? getNumero() {
