@@ -10,4 +10,14 @@ void main() {
   hortifrute.forEach((key, value) => print('$key and $value'));
 
   hortifrute['cod 4'] = 'melao';
+  maps2();
+}
+
+maps2() {
+  Map<String, double> salario = {
+    "gerente": 2000.00,
+    "vendedor": 1500.00,
+    "estagiario": 600.00
+  };
+  print(salario);
 }
