@@ -8,6 +8,7 @@ void main() {
   ];
 
   for (var nota in notas) {
+    // a cada repetição o nota armazena um valor de notas.
     print("As notas são: $nota");
   }
 }
