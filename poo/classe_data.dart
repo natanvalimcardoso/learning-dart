@@ -7,12 +7,12 @@ class Data {
 }
 
 main() {
-  var dataAniversario = Data(); //invocando o construtor
+  var dataAniversario = new Data(); //invocando o construtor
   dataAniversario.dia = 3;
   dataAniversario.mes = 10;
   dataAniversario.anos = 2020;
 
-  var dataCompra = Data(); //invocando o construtor
+  var dataCompra = new Data(); //invocando o construtor
   dataCompra.dia = 21;
   dataCompra.mes = 12;
   dataCompra.anos = 2001;
