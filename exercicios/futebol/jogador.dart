@@ -39,3 +39,15 @@ class Jogador {
 }
 
 
+/* 
+  int lerInteiro(String nomeVariavel){
+    print("digite $nomeVariavel: ");
+    var entrada = stdin.readLineSync();
+    int numero = int.parse(entrada!);
+    return numero;
+  }
+   lerString(String nomeVariavel){
+    stdout.write('digite $nomeVariavel');
+    var nome = stdin.readLineSync();
+      return nome;
+  } */
