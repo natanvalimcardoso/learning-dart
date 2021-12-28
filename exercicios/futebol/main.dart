@@ -8,7 +8,5 @@ main() {
     var entrada = stdin.readLineSync();
     int numero = int.parse(entrada!);
     contator++;
-
-    contator++;
-  } while (contator == 5);
+  } while (contator != 5);
 }
