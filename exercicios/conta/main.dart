@@ -46,7 +46,7 @@ main() {
 pergunta(Object valor) {
   var entrada = stdin.readLineSync();
   if (valor is int) {
-    int chamado = int.parse(entrada!);
+    int chamado = int.parse(entrada!); // nao tem como fazer?
     valor = chamado;
   } else if (valor is double) {
     double chamado = double.parse(entrada!);
