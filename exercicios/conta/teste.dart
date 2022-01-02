@@ -1,14 +1,10 @@
 import 'dart:io';
-
+var soma = 0;
 main() {
-  var depositarValor = 0.0;
-  var saldo = 0.0;
-  int contador = 0 ;
-  for(contador = 0; contador < 3; contador++){
-    print("Digite o valor que deseja depositar: ");
-    depositarValor = pergunta(0.0);
-    saldo = saldo + depositarValor;
-    print("O saldo atual é: $saldo");
+  for (int i = 0; i < 10; i++) {
+    
+    soma = soma + 10;
+    print('\nO seu saldo atual é de: R\$${soma}');
   }
 }
 
@@ -25,5 +21,5 @@ pergunta(Object valor) {
     String chamado = (entrada!).toString();
     valor = chamado;
   }
-  return valor; 
+  return valor;
 }

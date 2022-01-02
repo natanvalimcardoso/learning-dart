@@ -2,10 +2,12 @@ import 'dart:io';
 import 'Conta_imposto.dart';
 
 main() {
-  ContaImposto contaImposto = ContaImposto(
-      percentualImposto: 0, saldo: 0, sacarValor: 0.0, depositarValor: 0.0);
-  var saldoTotal;
+  var valorFinal = 0.0;
   var saida;
+  ContaImposto contaImposto = ContaImposto(
+      percentualImposto: 0, saldo: 0, sacarValor: 0.0, depositarValor: 0.0 ,);
+  
+  
 
   do {
     print(
@@ -19,26 +21,18 @@ main() {
         print('\nDigite o valor que você quer sacar:');
         double sacar = pergunta(0.0);
         contaImposto.sacarValor = sacar;
-        main();
         break;
       case 2:
         print('\nDigite o valor que você quer depositar:');
         double depositar = pergunta(0.0);
-        contaImposto.depositarValor = depositar; // TODO - TERMINAR A PARTE DE DEPOSITO que nao esta somando quando adicionado mais de uma vez.
-        print(saldoTotal);
-        
+        contaImposto.depositarValor = depositar;
+        contaImposto.depositar();
+        print("Voce depositou: $depositar e agora tem no saldo um total de: ${contaImposto.saldo}");
 
-        main();
         break;
       case 3:
-        print('\nO seu saldo é de: ');
-        print(contaImposto.saldo);
-        main();
         break;
       case 4:
-        print('\nO seu saldo é de: ');
-        print(contaImposto.saldo);
-        main();
     }
   } while (saida != 5);
 }
@@ -46,7 +40,7 @@ main() {
 pergunta(Object valor) {
   var entrada = stdin.readLineSync();
   if (valor is int) {
-    int chamado = int.parse(entrada!); // nao tem como fazer?
+    int chamado = int.parse(entrada!);
     valor = chamado;
   } else if (valor is double) {
     double chamado = double.parse(entrada!);
