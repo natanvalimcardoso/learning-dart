@@ -5,9 +5,11 @@ main() {
   var valorFinal = 0.0;
   var saida;
   ContaImposto contaImposto = ContaImposto(
-      percentualImposto: 0, saldo: 0, sacarValor: 0.0, depositarValor: 0.0 ,);
-  
-  
+    percentualImposto: 0,
+    saldo: 0,
+    sacarValor: 0.0,
+    depositarValor: 0.0,
+  );
 
   do {
     print(
@@ -27,12 +29,18 @@ main() {
         double depositar = pergunta(0.0);
         contaImposto.depositarValor = depositar;
         contaImposto.depositar();
-        print("Voce depositou: $depositar e agora tem no saldo um total de: ${contaImposto.saldo}");
-
+        print(
+            "Voce depositou: $depositar e agora tem no saldo um total de: ${contaImposto.saldo}");
         break;
       case 3:
+        print('\nSeu saldo é: ${contaImposto.saldo}');
         break;
       case 4:
+        print('\nDigite a quantidade de impostos que você recebeu:');
+        double impostosPergunta = pergunta(0.0);
+        contaImposto.percentualImposto = impostosPergunta;
+        contaImposto.calcularImposto();
+        print("O imposto aplicado foi de $impostosPergunta% e o total do seu saldo é de: ${contaImposto.saldo}");
     }
   } while (saida != 5);
 }

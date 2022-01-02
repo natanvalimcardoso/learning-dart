@@ -1,11 +1,11 @@
 import 'dart:io';
-var soma = 0;
+var soma = 100.0;
+var valor = 10.0; //selecionado
+
 main() {
-  for (int i = 0; i < 10; i++) {
-    
-    soma = soma + 10;
-    print('\nO seu saldo atual é de: R\$${soma}');
-  }
+  soma = soma - (valor * 100) / soma;
+  
+  print(soma);
 }
 
 pergunta(Object valor) {

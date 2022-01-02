@@ -10,10 +10,9 @@ class ContaImposto {
       required double this.sacarValor,
       required double this.depositarValor});
 
-  calcularImposto() => saldo = saldo / percentualImposto;
+  calcularImposto() => saldo = saldo - (percentualImposto * 100) / saldo;
 
   sacar() => saldo = saldo - sacarValor;
 
   depositar() => saldo = saldo + depositarValor;
-
 }
