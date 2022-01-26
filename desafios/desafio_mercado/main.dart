@@ -10,13 +10,14 @@ main() {
   List produtos = [];
 
   adicionar(String nomeParametro, String tipoParametro, double valorParametro) {
-    
-    Produtos(
-      nome: nomeParametro,
-      tipo: tipoParametro,
-      valor: valorParametro,
-    );
-  
+
+    produtos = [
+      Produtos(
+        nome: nomeParametro,
+        tipo: tipoParametro,
+        valor: valorParametro,
+      ),
+    ];
   }
 
   do {
@@ -37,6 +38,7 @@ main() {
         adicionar(nome, tipo, valor);
         break;
       case 2:
+      print(produtos[0]);
         break;
       case 3:
         break;
