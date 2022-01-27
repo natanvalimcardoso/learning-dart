@@ -7,27 +7,12 @@ import 'produtos.dart';
 
 main() {
   int saida = 0;
-  List produtos = [];
+  var produtos = Produtos(nome: '', tipo: '', valor: 0.0);
 
-
-  adicionar(String nomeParametro, String tipoParametro, double valorParametro) {
-    var novoProduto = Produtos(
-      nome: nomeParametro,
-      tipo: tipoParametro,
-      valor: valorParametro,
-    );
-    produtos.add(novoProduto);
-  }
-
-  mostrarProduto() {
-  for (var produto in produtos) {
-    print('Nome: ${produto.nome} - Tipo: ${produto.tipo} - Valor: ${produto.valor}');
-  }
-}
+ 
 
   do {
-    print(
-        'Digite a sua operação: (Adicionar: 1) - (Remover: 2) - (Listar: 3) - (sair: 4)\n');
+    print('Digite a sua operação: (Adicionar: 1) - (Remover: 2) - (Listar: 3) - (sair: 4)\n');
     var entrada = stdin.readLineSync();
     int numero = int.parse(entrada!);
     saida = numero;
@@ -40,22 +25,17 @@ main() {
         String tipo = pergunta('');
         print('Digite o valor do produto: ');
         double valor = pergunta(0.0);
-        adicionar(nome, tipo, valor);
+        produtos.adicionarProduto(nome, tipo, valor);
         break;
       case 2:
-       print('Digite o produto que quer remover');
-       
+        print('Digite o nome do produto que quer remover| ');
+        String nome = pergunta('');
+        produtos.removerProduto(nome);
         break;
       case 3:
-        mostrarProduto();
+        produtos.mostrarProduto();
         break;
       case 4:
     }
   } while (saida != 4);
 }
-
-/* mostrarProduto() {
-  for (var produto in produtos) {
-    print('Nome: ${produto.nome} - Tipo: ${produto.tipo} - Valor: ${produto.valor}');
-  }
-} */
