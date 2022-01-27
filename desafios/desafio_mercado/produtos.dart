@@ -5,6 +5,6 @@ class Produtos {
 
   Produtos({required this.nome, required this.tipo, required this.valor});
 
-   
+  mostrarProduto() => print("Nome: $nome Tipo: $tipo Valor: $valor");
 }
   
