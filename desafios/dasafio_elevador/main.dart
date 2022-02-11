@@ -8,6 +8,30 @@ Subir: para subir um andar (não deve subir se já estiver no último andar);
 Descer: para descer um andar (não deve descer se já estiver no térreo);
 Obs.: Encapsular todos os atributos da classe (criar os métodos set e get).
  */
-main(){
-  
+import 'dart:io';
+
+import 'pessoa.dart';
+
+main() {
+  int saida = 0;
+
+  do {
+    print(
+        'Digite a sua operação: (Tipo do Elevador: 1) - (Adicionar pessoa: 2) - (Remover pessoa: 3) \n - (Subir Elevador: 4) - (Descer Elevador: 5) - (Finalizar: 6)\n');
+    var entrada = stdin.readLineSync();
+    int numero = int.parse(entrada!);
+    saida = numero;
+
+    switch (numero) {
+      case 1:
+        print('Digite quantos andares tem o elevador: \n');
+        break;
+      case 2:
+
+        break;
+      case 3:
+      case 4:
+      case 5:
+    }
+  } while (saida != 6);
 }
