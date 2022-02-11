@@ -10,6 +10,8 @@ Obs.: Encapsular todos os atributos da classe (criar os métodos set e get).
  */
 import 'dart:io';
 
+import 'elevador.dart';
+import 'funcao.dart';
 import 'pessoa.dart';
 
 main() {
@@ -24,10 +26,18 @@ main() {
 
     switch (numero) {
       case 1:
-        print('Digite quantos andares tem o elevador: \n');
+        print('Digite o peso do (Elevador): \n');
+        int pesoElevador = pergunta(0.0);
+        print('Digite quantos andares tem o (Predio): \n');
+        int andares = pergunta(0.0);
+        Elevador(pesoElevador: pesoElevador, andaresPredio: andares);
         break;
       case 2:
-
+        print('Digite o nome: \n');
+        String nome = pergunta(0.0);
+        print('Digite o peso da pessoa: \n');
+        int pesoPessoas = pergunta(0.0);
+        Pessoa(nome: nome, peso: pesoPessoas);
         break;
       case 3:
       case 4:
