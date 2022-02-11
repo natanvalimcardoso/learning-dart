@@ -8,18 +8,20 @@ Subir: para subir um andar (não deve subir se já estiver no último andar);
 Descer: para descer um andar (não deve descer se já estiver no térreo);
 Obs.: Encapsular todos os atributos da classe (criar os métodos set e get).
  */
-import 'dart:io';
 
+import 'dart:io';
 import 'elevador.dart';
 import 'funcao.dart';
 import 'pessoa.dart';
 
 main() {
   int saida = 0;
+  var pessoa = Pessoa(nome: '', peso: 0);
 
+  
   do {
     print(
-        'Digite a sua operação: (Tipo do Elevador: 1) - (Adicionar pessoa: 2) - (Remover pessoa: 3) \n - (Subir Elevador: 4) - (Descer Elevador: 5) - (Finalizar: 6)\n');
+        'Digite a sua operação: (Tipo do Elevador: 1) - (Adicionar pessoa: 2) - (Remover pessoa: 3) \n - (Subir Elevador: 4) - (Descer Elevador: 5) - (mostrar pessoas : 6) - (Finalizar: 7)\n');
     var entrada = stdin.readLineSync();
     int numero = int.parse(entrada!);
     saida = numero;
@@ -27,21 +29,30 @@ main() {
     switch (numero) {
       case 1:
         print('Digite o peso do (Elevador): \n');
-        int pesoElevador = pergunta(0.0);
+        int pesoElevador = pergunta(0);
         print('Digite quantos andares tem o (Predio): \n');
-        int andares = pergunta(0.0);
+        int andares = pergunta(0);
         Elevador(pesoElevador: pesoElevador, andaresPredio: andares);
         break;
       case 2:
         print('Digite o nome: \n');
-        String nome = pergunta(0.0);
+        String nome = pergunta('');
         print('Digite o peso da pessoa: \n');
-        int pesoPessoas = pergunta(0.0);
+        int pesoPessoas = pergunta(0);
         Pessoa(nome: nome, peso: pesoPessoas);
+        
+        pessoa.mostrarPessoas();
         break;
       case 3:
+        print("Digite o nome da pessoa que você quer remover: \n");
+        String nomePessoa = pergunta('');
+        pessoa.removerPessoa(nomePessoa);
+        break;
       case 4:
       case 5:
+      case 6:
+        pessoa.mostrarPessoas();
+        break;
     }
-  } while (saida != 6);
+  } while (saida != 7);
 }
