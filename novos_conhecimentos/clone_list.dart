@@ -3,6 +3,6 @@
 // pode ser usado em Maps e Sets.
 main(){
   var listNumeros = [1, 2, 3];
-  var listClone = [...listNumeros];
+  var listClone = [...listNumeros]; //Lembrando que existe com from, addall...
   print(listClone);
 }
