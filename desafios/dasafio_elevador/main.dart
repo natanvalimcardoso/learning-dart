@@ -11,7 +11,7 @@ Obs.: Encapsular todos os atributos da classe (criar os métodos set e get).
 
 import 'dart:io';
 import 'elevador.dart';
-import 'funcao.dart';
+import 'funcao.dart';        //Não terminado
 import 'pessoa.dart';
 
 main() {
