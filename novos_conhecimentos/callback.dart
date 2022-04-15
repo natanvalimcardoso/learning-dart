@@ -2,12 +2,13 @@ main() {
   List arrayTestForEach = [1, 2, 3, 4, 5];
 
   callbackForEach(elem, index, arr) {
+    //teste
     return (arr[index] = elem * 2);
   }
 
-  newForEach( value) {
+  newForEach(value) {
     value = arrayTestForEach;
-    
+
     for (int i = 0; i < arrayTestForEach.length; i++) {
       print(value);
     }
@@ -15,5 +16,4 @@ main() {
 
   var valor = newForEach('');
   print(valor);
-
 }
