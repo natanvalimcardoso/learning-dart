@@ -2,7 +2,7 @@ import 'dart:io';
 import 'Conta_imposto.dart';
 
 main() {
-  var valorFinal = 0.0;
+  var valorFinal = 0.0; //S
   var saida;
   ContaImposto contaImposto = ContaImposto(
     percentualImposto: 0,
@@ -40,7 +40,8 @@ main() {
         double impostosPergunta = pergunta(0.0);
         contaImposto.percentualImposto = impostosPergunta;
         contaImposto.calcularImposto();
-        print("O imposto aplicado foi de $impostosPergunta% e o total do seu saldo é de: ${contaImposto.saldo}");
+        print(
+            "O imposto aplicado foi de $impostosPergunta% e o total do seu saldo é de: ${contaImposto.saldo}");
     }
   } while (saida != 5);
 }
