@@ -1,6 +1,7 @@
 //* Criar um supermercado com um array de produtos que possui os seguintes atributos: nome, preço, tipo. e ter a função adicionar produto que adiciona um novo produto ao array.
 //* verificar se o produto existe, mostrar todos produtos de acordo com o tipo a opção remover produto
 // ignore_for_file: unused_local_variable, unused_element//
+// terminar
 import 'dart:io';
 import 'funcoes.dart';
 import 'produtos.dart';
