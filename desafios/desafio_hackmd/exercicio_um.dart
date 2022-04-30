@@ -4,7 +4,6 @@
 import 'dart:io';
 
 import 'metodo_read.dart';
-late int soma;
 main() {
   print('Digite seu nome: ');
   String nome = pergunta('');
