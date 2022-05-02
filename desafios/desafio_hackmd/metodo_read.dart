@@ -1,5 +1,5 @@
 import 'dart:io';
-
+//metodo leitura revisar
 pergunta(Object valor) {
   var entrada = stdin.readLineSync();
   if (valor is int) {
