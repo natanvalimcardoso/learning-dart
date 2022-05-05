@@ -3,6 +3,8 @@ a = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100].
 Escreva um código Dart que pegue essa lista e crie uma nova lista 
 que contenha apenas os elementos pares dessa lista.*/
 
+import 'dart:convert';
+
 main() {
   List lista = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100];
 
@@ -19,9 +21,22 @@ clonaLista(List lista) {
 }
 
 converterPar(List lista) {
-  for (int cont = 0; cont <= lista.length; cont++) {
-    if (lista[cont] % 2 == 0) {
-      print(lista.length);
+  var listaNumerosPares = [];
+  for (var i = 0; i < lista.length; i++) {
+    if (lista[i] % 2 == 0) {
+      listaNumerosPares.add(lista[i]);
     }
   }
+  return listaNumerosPares;
 }
+
+// converterPar2(List lista) {
+//   var listaNumerosPares = [];
+//   for (var item in lista) {
+//     if (lista[item] % 2 == 0) {
+//       listaNumerosPares.add(lista[item]);
+//     }
+//   }
+
+//   return listaNumerosPares;
+// }
