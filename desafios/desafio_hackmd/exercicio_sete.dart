@@ -10,7 +10,7 @@ main() {
 
   var clone = clonaLista(lista);
   var listaNumerosParesClonada = converterPar(clone);
-  // print(listaNumerosParesClonada);
+  print(listaNumerosParesClonada);
 }
 
 // funções que eu criei
@@ -20,23 +20,23 @@ clonaLista(List lista) {
   return listClone;
 }
 
-converterPar(List lista) {
-  var listaNumerosPares = [];
-  for (var i = 0; i < lista.length; i++) {
-    if (lista[i] % 2 == 0) {
-      listaNumerosPares.add(lista[i]);
-    }
-  }
-  return listaNumerosPares;
-}
+// converterPar(List lista) {
+//   var listaNumerosPares = [];
+//   for (var i = 0; i < lista.length; i++) {
+//     if (lista[i] % 2 == 0) {
+//       listaNumerosPares.add(lista[i]);
+//     }
+//   }
+//   return listaNumerosPares;
+// }
 
 ///////////////////////////
 
-converterPar2(List lista) {
+converterPar(List lista) {
   var listaNumerosPares = [];
   for (var item in lista) { 
-    if (lista[item] % 2 == 0) {
-      listaNumerosPares.add(lista[item]);
+    if (item % 2 == 0) {
+      listaNumerosPares.add(item);
     }
   }
   return listaNumerosPares;
