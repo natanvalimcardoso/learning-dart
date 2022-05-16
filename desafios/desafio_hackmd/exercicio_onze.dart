@@ -5,7 +5,7 @@ e cria uma nova lista apenas com o primeiro e o último elementos da lista forne
  Para praticar, escreva este código dentro de uma função.*/
 
 main() {
-  List lista = [5, 10, 15, 20, 25];
+  List<int> lista = [5, 10, 15, 20, 25];
 
   var listaComPrimeirosUltimos = primeiroUltimoLista(lista);
   print(listaComPrimeirosUltimos);
@@ -13,8 +13,8 @@ main() {
 
 // minha forma
 
-primeiroUltimoLista(List lista) {
-  List novaLista = [];
+List<int> primeiroUltimoLista(List<int> lista) {
+  List<int> novaLista = [];
   novaLista.add(lista.first);
   novaLista.add(lista.last);
   return novaLista;
@@ -22,6 +22,6 @@ primeiroUltimoLista(List lista) {
 
 // Forma mais resumida
 
-webExemple(List lista) {
-  return [lista.first, lista.last];
+List<int> webExemple(List<int> lista) {
+  return [lista.first, lista.last]; // Forma pra colocar mais de um elemento dentro de uma lista
 }
