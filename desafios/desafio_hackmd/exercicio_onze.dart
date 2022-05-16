@@ -7,19 +7,21 @@ e cria uma nova lista apenas com o primeiro e o último elementos da lista forne
 main() {
   List lista = [5, 10, 15, 20, 25];
 
-  var clone = clonaLista(lista);
-  var listaComPrimeirosUltimos = primeiroUltimoLista(clone);
+  var listaComPrimeirosUltimos = primeiroUltimoLista(lista);
   print(listaComPrimeirosUltimos);
 }
 
-clonaLista(List lista) {
-  var listClone = [...lista];
-  return listClone;
-}
+// minha forma
 
 primeiroUltimoLista(List lista) {
   List novaLista = [];
   novaLista.add(lista.first);
   novaLista.add(lista.last);
   return novaLista;
+}
+
+// Forma mais resumida
+
+webExemple(List lista) {
+  return [lista.first, lista.last];
 }
