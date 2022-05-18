@@ -1,0 +1,22 @@
+{
+    "id_reserva": 1,
+    "data_expiracao_reserva": "2020-05-05",
+    "status": false,
+    "aluno": [
+        {
+            "id_aluno": 1
+        }
+    ],
+    "livro": [
+        {
+            "id_livro": 1,
+            "livro_titulo": "Pica pau",
+            "livro_autor": "Joao",
+            "lista_reserva": [
+                {
+                    "id_reserva":  1
+                }
+            ]
+        }
+    ]
+}
