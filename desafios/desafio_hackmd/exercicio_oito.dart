@@ -5,11 +5,11 @@ import 'metodo_read.dart';
 // Faça um jogo de Pedra-Papel-Tesoura para um jogador contra o computador(usar Random()), o usúario deve digitar 
 //"exit" para sair do algoritmo, deve ter um pontuador de pontos e printar assim que o usuário sair da partida, 
 void main() {
-  print("Bem vindo ao pedra papel tessoura\n Escreva (exit) para sair do jogo");
+  print("Bin coming to Pedra Paper Scissors \ n Write (exit) to leave the game");
   final random = Random();
 
   Map regras = {
-    "pedra": "tessoura",
+    "stone": "tessoura",
     "tessoura": "papel",
     "papel": "pedra"
   };
@@ -17,7 +17,7 @@ void main() {
   int eu = 0;
   int computador = 0;
 
-  List<String> opcoes = ['pedra', 'tessoura', 'papel'];
+  List<String> opcoes = ['pedra', 'tessoura', 'paper'];
 
   while (true) {
     String escolhasComputador = opcoes[random.nextInt(opcoes.length)];

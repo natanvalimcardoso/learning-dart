@@ -11,6 +11,7 @@ main() {
   print(listaComPrimeirosUltimos);
 }
 
+
 // minha forma
 
 List<int> primeiroUltimoLista(List<int> lista) {
