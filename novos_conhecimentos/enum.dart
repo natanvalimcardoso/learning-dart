@@ -6,8 +6,6 @@ enum Color {
   yellow,
 }
 
-
-
 main(){
   var corFavorita = Color.red;
   switch (corFavorita) {

@@ -13,16 +13,16 @@ void main() {
     print('O sexo é masculino');
   }
 
-  // if (nome.toLowerCase().contains('valim')) {
-  //   print('É da familia valim');
-  // }
+  if (nome.toLowerCase().contains('valim')) {
+    print('É da familia valim');
+  }
 
-  // var dadosPacientes = paciente.split('|'); // O split vai separar de acordo com tipo de caracteres especial que voce passar pra ele
-  // print(dadosPacientes); // e vai retornar uma lista com os dados ja separado.
+  var dadosPacientes = paciente.split('|'); // O split vai separar de acordo com tipo de caracteres especial que voce passar pra ele
+  print(dadosPacientes); // e vai retornar uma lista com os dados ja separado.
 
-  // for (var paciente in pacientes) {
-  //   var dadosPacientesGeral = paciente.split('|');
-  //   var ultimoNome = dadosPacientesGeral[0].split(' '); // separa por espaço
-  //   print(ultimoNome.last);
-  // }
+  for (var paciente in pacientes) {
+    var dadosPacientesGeral = paciente.split('|');
+    var ultimoNome = dadosPacientesGeral[0].split(' '); // separa por espaço
+    print(ultimoNome.last);
+  }
 }
