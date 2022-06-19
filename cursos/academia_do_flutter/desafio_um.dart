@@ -11,11 +11,13 @@ var pacientes = [
   'Lucas|25|desenvolvedor|SP',
   'Luciana|30|estudante|SC',
 ];
- List<String> dadosPaciente = [];
+  dadosPaciente = [];
 
-  pacientes.forEach((element) {
-    dadosPaciente = element.split('|');
-  });
 
+  print(dadosPaciente);
+
+  for (var element in pacientes) {
+    dadosPaciente.add(element.split('|'));
+  }
   print(dadosPaciente);
 }
