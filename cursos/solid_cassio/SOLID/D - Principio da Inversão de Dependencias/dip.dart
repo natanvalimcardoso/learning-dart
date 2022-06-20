@@ -5,9 +5,9 @@ class PagamentoRepository {
   void save() => print('Salvando pagamento');
 }
 
-class ContaCorrente {
+class ContaCorrenteErrada {
   late PagamentoRepository _repository;
-  ContaCorrente() {
+  ContaCorrenteErrada() {
     _repository = PagamentoRepository(); //! Está violando pois esta utilizando uma classe concreta para inicializar o nosso repositorio
   }
 
@@ -31,3 +31,22 @@ class PagamentoRepositoryMock implements IpagamentoRepository{
   @override
   void save() => print('mock');
 }
+
+class ContaCorrenteCorreta{
+  late IpagamentoRepository _repository;
+  ContaCorrenteCorreta(IpagamentoRepository repository){
+    _repository = repository;
+  }
+
+  void executarLogica(){
+    _repository.save();
+  }
+}
+void main() {
+  ContaCorrenteCorreta conta = ContaCorrenteCorreta(PagamentoRepositoryImp());
+  conta.executarLogica();
+  conta = ContaCorrenteCorreta(PagamentoRepositoryMock());
+  conta.executarLogica();
+}
+
+
