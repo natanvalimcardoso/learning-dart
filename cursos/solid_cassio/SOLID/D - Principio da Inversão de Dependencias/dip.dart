@@ -1,52 +1,28 @@
-// Depender de abstações e não de classes concretas
+//Princípio da inversão de dependências
 
-//! Incorreta // Nossa classe não é testavel, se um dia quiser mudar o pagamento Repository terá que mudar a conta corrente, não conseguimos aplicar a substituição de Liskov
-class PagamentoRepository {
-  void save() => print('Salvando pagamento');
+// quando criamos nosso objeto o nosso construtor não pode depender de uma classe concreta e sim de abstrações
+
+abstract class ISaveDataRepository {
+  void saveData();
 }
 
-class ContaCorrenteErrada {
-  late PagamentoRepository _repository;
-  ContaCorrenteErrada() {
-    _repository = PagamentoRepository(); //! Está violando pois esta utilizando uma classe concreta para inicializar o nosso repositorio
-  }
-
-  void executarAlgumaLogica(){
-    _repository.save();
-  }
-}
-
-//* Correta
-
-abstract class IpagamentoRepository{
-  void save();
-}
-
-class PagamentoRepositoryImp implements IpagamentoRepository{
+class SaveDataRepositoryImp implements ISaveDataRepository {
   @override
-  void save() => print('implementação');
+  void saveData() => print('Salvando dados');
 }
 
-class PagamentoRepositoryMock implements IpagamentoRepository{
-  @override
-  void save() => print('mock');
-}
-
-class ContaCorrenteCorreta{
-  late IpagamentoRepository _repository;
-  ContaCorrenteCorreta(IpagamentoRepository repository){
+class Pessoa {
+  late ISaveDataRepository _repository;
+  Pessoa(ISaveDataRepository repository) {
     _repository = repository;
   }
 
-  void executarLogica(){
-    _repository.save();
+  void salvar() {
+    _repository.saveData();
   }
 }
+
 void main() {
-  ContaCorrenteCorreta conta = ContaCorrenteCorreta(PagamentoRepositoryImp());
-  conta.executarLogica();
-  conta = ContaCorrenteCorreta(PagamentoRepositoryMock());
-  conta.executarLogica();
+  Pessoa aluno = Pessoa(SaveDataRepositoryImp());
+  aluno.salvar();
 }
-
-

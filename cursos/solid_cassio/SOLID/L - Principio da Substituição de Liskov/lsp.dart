@@ -13,7 +13,7 @@ class ContaCorrente implements Conta {
   void verSaldo() => print('Saldo...');
 }
 
-class ContaPoupanca implements Conta { //mais dificil
+class ContaPoupanca implements Conta { 
   @override
   void depositar(int valor) => print('Depositando...');
 
@@ -22,7 +22,7 @@ class ContaPoupanca implements Conta { //mais dificil
 }
 
 // esse é o problema da substituição, 
-void main(List<String> args) {
+void main() {
   Conta conta = ContaCorrente();
   conta.depositar(10);
   conta = ContaPoupanca();

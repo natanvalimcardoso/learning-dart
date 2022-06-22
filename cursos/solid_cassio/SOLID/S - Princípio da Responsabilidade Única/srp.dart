@@ -1,5 +1,3 @@
-// Uma classe deve ter apenas um motivo para mudar.
-// Sua responsabilidade deve ser sempre em cima de um e apenas um ator.
 
 class ContaSalario {
 
@@ -16,3 +14,7 @@ class ContaSalario {
   }
   
 }
+ main(){
+    var conta = new ContaSalario();
+    conta.validarContaExistente(null);  
+ }
