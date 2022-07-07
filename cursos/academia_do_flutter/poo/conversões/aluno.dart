@@ -9,4 +9,7 @@ class Aluno {
     required this.nome,
     required this.cursos,
   });
+
+  @override
+  String toString() => 'Aluno(nome: $nome, cursos: $cursos)';
 }
