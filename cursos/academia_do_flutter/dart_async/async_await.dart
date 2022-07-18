@@ -1,10 +1,8 @@
 main() async {
-
-  String mensagem = await processoComDados();
-
-  print('A mensagem é: $mensagem');
+  int valorAwait = await processoComDados();
+  print('O valor com AsyncAwait é: $valorAwait');
 }
 
-Future<String> processoComDados() {
-  return Future.delayed(Duration(seconds: 3), () => 'Fim do processo P3');
+Future<int> processoComDados() {
+  return Future.delayed(Duration(seconds: 3), () => 42);
 }
