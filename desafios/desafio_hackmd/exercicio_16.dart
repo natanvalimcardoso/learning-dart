@@ -22,7 +22,6 @@ main() {
     int escolhaUsuario = pergunta(0);
 
     if (escolhaUsuario == 101) {
-
       break;
     }
   }
