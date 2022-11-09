@@ -18,16 +18,34 @@ void main() {
     Person('Ronaldo', 90, 'Brasil', 'Masculino'),
   ];
 
-  var mediaIdadeHomens = 0;
+  double mediaIdadeHomens = 0;
+  int qntMulherer = 0;
+  int qntHomens = 0;
 
   //* printar  pessoas com mais de 30 anos e do Brasil
   // var newListas = listPeople.where((p) => p.age > 30 && p.country == 'Brasil').toList();
   // newListas.forEach((person) => print(person.name));
   //* Descobrir a média da idade dos homens
-  var listaIdadeMasculino = listPeople.where((person) => person.gender.toLowerCase() == 'masculino');
+  var listaIdadeMasculino =
+      listPeople.where((person) => person.gender.toLowerCase() == 'masculino');
   listaIdadeMasculino.forEach((personMasculino) {
     mediaIdadeHomens += personMasculino.age;
   });
 
   print(mediaIdadeHomens / listaIdadeMasculino.length);
+
+  //* Descobrir o total de pessoas no Brasil. E se há mais mulheres ou homens printando o maior;
+
+  var listaPessoasBrasil = listPeople.where((person) => person.country.toLowerCase() == 'brasil');
+  listaPessoasBrasil.forEach((person) {
+      if (person.gender.toLowerCase() == 'feminino') {
+        qntMulherer++;
+      } else {
+        qntHomens++;
+      }
+    },
+  );
+  qntMulherer > qntHomens
+      ? print('A quantidade total é: ${listaPessoasBrasil.length} e o número de mulheres é maior: $qntMulherer')
+      : print('A quantidade total é: ${listaPessoasBrasil.length} e o número de homens é maior: $qntHomens');
 }
