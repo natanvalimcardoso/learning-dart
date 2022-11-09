@@ -18,9 +18,16 @@ void main() {
     Person('Ronaldo', 90, 'Brasil', 'Masculino'),
   ];
 
-  // printar  pessoas com mais de 30 anos e do Brasil
-  var newListas = listPeople.where((p) => p.age > 30 && p.country == 'Brasil').toList();
-  newListas.forEach((person) => print(person.name));
-  // printar a idade do sexo masculino
+  var mediaIdadeHomens = 0;
 
+  //* printar  pessoas com mais de 30 anos e do Brasil
+  // var newListas = listPeople.where((p) => p.age > 30 && p.country == 'Brasil').toList();
+  // newListas.forEach((person) => print(person.name));
+  //* Descobrir a média da idade dos homens
+  var listaIdadeMasculino = listPeople.where((person) => person.gender.toLowerCase() == 'masculino');
+  listaIdadeMasculino.forEach((personMasculino) {
+    mediaIdadeHomens += personMasculino.age;
+  });
+
+  print(mediaIdadeHomens / listaIdadeMasculino.length);
 }
