@@ -1,5 +1,5 @@
 main() {
-  var lista = ['joão', 'maria', 'pedro', 'jose', 'marcos', 'Janaina', 'Luana'];
+  var lista = ['joão', 'maria', 'pedro', 'jose', 'marcos', 'Janaina', 'Luana', 'Luana', 'jose'];
 
   //* Desafio 1 - Imprimir a lista de nomes com a primeira letra J
   var listaComNomesLetraJ = lista.where((nomes) => nomes.toLowerCase().startsWith('j'));
@@ -13,4 +13,7 @@ main() {
   //* Desafio 4 - retornar a lista de nomes que possui a letra
   var listaComNomesComLetraA = lista.where((nomes) => nomes.toLowerCase().contains('a'));
   print(listaComNomesComLetraA);
+  //* Desafio 5 - retornar a lista sem os nomes repetidos
+  var listaSemRepetidos = lista.toSet();
+  print(listaSemRepetidos);
 }
