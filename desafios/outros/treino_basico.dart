@@ -1,5 +1,18 @@
 main() {
-  var lista = ['joão', 'maria', 'pedro', 'jose', 'marcos', 'Janaina', 'Luana', 'Luana', 'jose'];
+  var lista = [
+    'joão',
+    'maria',
+    'pedro',
+    'jose',
+    'marcos',
+    'Janaina',
+    'Luana',
+    'Luana',
+    'jose',
+    'Ana',
+    'brunão',
+    'Carlinhos'
+  ];
 
   // //* Desafio 1 - Imprimir a lista de nomes com a primeira letra J
   // var listaComNomesLetraJ = lista.where((nomes) => nomes.toLowerCase().startsWith('j'));
@@ -23,4 +36,12 @@ main() {
   //   newList.add(capitalize(element));
   // }
   // print(newList);
+  //* Desafio 7 - retornar uma lista com os nomes em ordem alfabetica
+  // var novaLista = [];
+  // for (var element in lista) {
+  //   novaLista.add(element.toLowerCase());
+  // }
+  // novaLista.sort();
+  // print(novaLista);
+
 }
