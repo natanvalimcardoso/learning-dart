@@ -48,4 +48,6 @@ void main() {
   qntMulherer > qntHomens
       ? print('A quantidade total é: ${listaPessoasBrasil.length} e o número de mulheres é maior: $qntMulherer')
       : print('A quantidade total é: ${listaPessoasBrasil.length} e o número de homens é maior: $qntHomens');
+
+  //* Descobrir a quantidade de pessoas com mais de 30 anos e do Brasil
 }
