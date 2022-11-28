@@ -44,4 +44,13 @@ main() {
   // novaLista.sort();
   // print(novaLista);
 
+  //* Desafio 8 - retornar uma lista com os nomes em ordem alfabetica inversa 
+  var novaLista = [];
+  for (var element in lista) {
+    novaLista.add(element.toLowerCase());
+  }
+  novaLista.sort();
+  novaLista = novaLista.reversed.toList();
+  print(novaLista);
+
 }
