@@ -45,12 +45,24 @@ main() {
   // print(novaLista);
 
   //* Desafio 8 - retornar uma lista com os nomes em ordem alfabetica inversa 
-  var novaLista = [];
-  for (var element in lista) {
-    novaLista.add(element.toLowerCase());
-  }
-  novaLista.sort();
-  novaLista = novaLista.reversed.toList();
-  print(novaLista);
+  // var novaLista = [];
+  // for (var element in lista) {
+  //   novaLista.add(element.toLowerCase());
+  // }
+  // novaLista.sort();
+  // novaLista = novaLista.reversed.toList();
+  // print(novaLista);
+
+  var jogo1 = 0;
+  var jogo2 = 0;
+
+
+ if (jogo1 > jogo2) {
+  print('Time 1 venceu o jogo');
+ }if (jogo1 < jogo2) {
+  print('Time 2 venceu o jogo');  
+ }else{
+  print('Empate');
+ }
 
 }
