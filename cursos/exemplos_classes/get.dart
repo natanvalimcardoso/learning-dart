@@ -16,9 +16,4 @@ main() {
   Bebe pessoa = new Bebe("", 2 , 232);
   print(pessoa.idade);              // a unica forma que eu pude iniciar a idade foi por que eu startei o get idade acima se não eu não conseguiria usar
   
-  List list = ['nata', 'sua'];
-
-  for (var element in list) {
-    
-  }
 }
