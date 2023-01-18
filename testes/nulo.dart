@@ -16,9 +16,7 @@ void main(List<String> args) {
     Pessoa(nome: 'natan', idade: 12, roupas: []),
   ];
 
-  if (lista.first.roupas == []) {
-    print('É nulo');
-  }else{
-    print('NÃO nulo');
-  }
+  var valor  = lista.first.roupas ?? 'Não recebi nada pois é nulo';
+  
+  print(valor);
 }
