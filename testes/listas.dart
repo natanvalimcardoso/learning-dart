@@ -15,7 +15,7 @@ class CampaingsModel {
 }
 
 void main(List<String> args) {
-  List listaCampaings = [
+  List<CampaingsModel> listaCampaings = [
     CampaingsModel(title: 'natan', categories: [
       CategorysModel(
         iconPath: 'natan',
@@ -32,29 +32,32 @@ void main(List<String> args) {
         segmentName: 'natan1',
       ),
     ]),
-    CampaingsModel(title: 'natan1', categories: [
-    ]),
-    CampaingsModel(title: 'natan1', categories: [
-      CategorysModel(
-        iconPath: 'natan1',
-        segmentId: 'natan1',
-        name: 'natan1',
-        segmentName: 'natan1',
-      ),
-    ]),
+    CampaingsModel(
+      title: 'natan1',
+      categories: [
+        CategorysModel(
+          iconPath: 'natan1',
+          segmentId: 'natan1',
+          name: 'natan1',
+          segmentName: 'natan1',
+        ),
+      ],
+    ),
+    CampaingsModel(title: 'natan1', categories: []),
   ];
 
-  List campaignsList = [] ;
+  List listaAdicionada = [];
 
   for (var element in listaCampaings) {
-    if (element.categories != null || element.categories.isNotEmpty || element.categories != []) {
-      campaignsList.add(element.categories);
+    if (element.categories!.isNotEmpty) {
+      print("o elemento é ${element.categories}");
+      listaAdicionada.add(element.categories);
     }
   }
 
-  print("o length é ${campaignsList.length}");
+  print("o length é ${listaAdicionada.length}");
 
-  campaignsList.forEach((element) {
+  listaAdicionada.forEach((element) {
     print(element.first.name);
   });
 }
