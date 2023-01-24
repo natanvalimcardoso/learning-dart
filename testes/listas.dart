@@ -34,5 +34,5 @@ void main(List<String> args) {
     ])
   ];
 
-  
+  List campaignsList = <CategorysModel>[] ;
 }
