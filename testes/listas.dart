@@ -18,7 +18,7 @@ void main(List<String> args) {
   List<CampaingsModel> listaCampaings = [
     CampaingsModel(title: 'natan', categories: [
       CategorysModel(
-        iconPath: 'natan',
+        iconPath: 'iconezin',
         segmentId: 'natan',
         name: 'natan',
         segmentName: 'natan',
@@ -26,7 +26,7 @@ void main(List<String> args) {
     ]),
     CampaingsModel(title: 'natan1', categories: [
       CategorysModel(
-        iconPath: 'natan1',
+        iconPath: 'icone',
         segmentId: 'natan1',
         name: 'natan1',
         segmentName: 'natan1',
@@ -36,7 +36,7 @@ void main(List<String> args) {
       title: 'natan1',
       categories: [
         CategorysModel(
-          iconPath: 'natan1',
+          iconPath: 'icone 2',
           segmentId: 'natan1',
           name: 'natan1',
           segmentName: 'natan1',
@@ -57,7 +57,5 @@ void main(List<String> args) {
 
   print("o length é ${listaAdicionada.length}");
 
-  listaAdicionada.forEach((element) {
-    print(element.first.name);
-  });
+  
 }
