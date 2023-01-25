@@ -19,7 +19,7 @@ void main(List<String> args) {
     CampaingsModel(title: 'natan', categories: [
       CategorysModel(
         iconPath: 'iconezin',
-        segmentId: 'natan',
+        segmentId: '3',
         name: 'natan',
         segmentName: 'natan',
       ),
@@ -27,7 +27,7 @@ void main(List<String> args) {
     CampaingsModel(title: 'natan1', categories: [
       CategorysModel(
         iconPath: 'icone',
-        segmentId: 'natan1',
+        segmentId: '2',
         name: 'natan1',
         segmentName: 'natan1',
       ),
@@ -37,7 +37,7 @@ void main(List<String> args) {
       categories: [
         CategorysModel(
           iconPath: 'icone 2',
-          segmentId: 'natan1',
+          segmentId: '1',
           name: 'natan1',
           segmentName: 'natan1',
         ),
@@ -50,12 +50,48 @@ void main(List<String> args) {
 
   for (var element in listaCampaings) {
     if (element.categories!.isNotEmpty) {
-      print("o elemento é ${element.categories}");
       listaAdicionada.add(element.categories);
     }
   }
 
-  print("o length é ${listaAdicionada.length}");
+  List listaIconPath = percorrerListIconPath(listaAdicionada);
+  List listaName = percorrerListName(listaAdicionada);
+  List listaSegmentId = percorrerListSegmentId(listaAdicionada);
 
-  
+  print(listaIconPath);
+  print(listaName);
+  print(listaSegmentId);
 }
+
+
+percorrerListIconPath(List<dynamic> lista) {
+  List listaCerta = [];
+  for (var element in lista) {
+    for (var element2 in element) {
+      listaCerta.add(element2.iconPath);
+    }
+  }
+  return listaCerta;
+}
+
+percorrerListName(List<dynamic> lista) {
+  List listaCerta = [];
+  for (var element in lista) {
+    for (var element2 in element) {
+      listaCerta.add(element2.name);
+    }
+  }
+  return listaCerta;
+}
+
+percorrerListSegmentId(List<dynamic> lista) {
+  List listaCerta = [];
+  for (var element in lista) {
+    for (var element2 in element) {
+      listaCerta.add(element2.segmentId);
+    }
+  }
+  return listaCerta;
+}
+
+
