@@ -46,23 +46,18 @@ void main(List<String> args) {
     CampaingsModel(title: 'natan1', categories: []),
   ];
 
-  List listaAdicionada = [];
+  List listaPrincipal = percorrerListaPrincipal(listaCampaings);
 
-  for (var element in listaCampaings) {
-    if (element.categories!.isNotEmpty) {
-      listaAdicionada.add(element.categories);
-    }
-  }
-
-  List listaIconPath = percorrerListIconPath(listaAdicionada);
-  List listaName = percorrerListName(listaAdicionada);
-  List listaSegmentId = percorrerListSegmentId(listaAdicionada);
+  List listaIconPath = percorrerListIconPath(listaPrincipal);
+  List listaName = percorrerListName(listaPrincipal);
+  List listaSegmentId = percorrerListSegmentId(listaPrincipal);
 
   print(listaIconPath);
   print(listaName);
   print(listaSegmentId);
 }
 
+//* ---------------------------- Funções ---------------------------- //
 
 percorrerListIconPath(List<dynamic> lista) {
   List listaCerta = [];
@@ -72,6 +67,17 @@ percorrerListIconPath(List<dynamic> lista) {
     }
   }
   return listaCerta;
+}
+
+percorrerListaPrincipal(List<dynamic> lista) {
+  List listaAdicionada = [];
+
+  for (var element in lista) {
+    if (element.categories!.isNotEmpty) {
+      listaAdicionada.add(element.categories);
+    }
+  }
+  return listaAdicionada;
 }
 
 percorrerListName(List<dynamic> lista) {
@@ -93,5 +99,3 @@ percorrerListSegmentId(List<dynamic> lista) {
   }
   return listaCerta;
 }
-
-
