@@ -9,6 +9,10 @@ class Pessoa {
     required this.idade,
     this.roupas,
   });
+
+  maiorIdade(int idadePessoa){
+    return idadePessoa >= 18;
+  }
 }
 
 void main(List<String> args) {
