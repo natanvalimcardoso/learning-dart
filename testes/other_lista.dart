@@ -8,7 +8,6 @@ class Pessoa {
     required this.idade,
   });
 }
-
 class Profissao {
   int salario;
   List<Pessoa> pessoas;
