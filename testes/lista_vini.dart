@@ -1,5 +1,5 @@
 import 'dart:io';
-
+//ok
 main() {
   List<int> listaDois = [];
   List<int> listaTriplicada = [];
